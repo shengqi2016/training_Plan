@@ -7,25 +7,52 @@
  */
 ?>
 <!doctype html>
-<html>
+<html lang="en">
 <head>
-    <title>Training hours</title>
+    <title>Login</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
     <style>
-        
-    body {
-  background-color: lightblue;
-    }
+        @media (max-width: 768px) {
+            #content {
+                width: 90%;
+                height: auto;
+            }
+        }
+
+        #content {
+            width: 30%;
+            height: 30%;
+            border-style: solid;
+
+
+        }
+
+        .centered-container {
+            background-image: url("resources/chinese_background.png") ;
+            background-size: cover;
+            background-position: center;
+            display: grid;
+            place-items: center;
+            height: 100vh;
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-    <h1>
-        陆宇星大傻子
-    </h1>
+<div class="centered-container">
+    <div class="container text-center" id="content">
+        <h1>Login</h1>
+        <br>
+        <br>
+        <form action="login_process.php" method="post">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username"><br><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password"><br><br>
+            <input type="submit" value="Login">
+        </form>
     </div>
+</div>
+
 </body>
-
-
-</html>
